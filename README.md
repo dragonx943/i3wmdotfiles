@@ -78,13 +78,13 @@ chmod +x setup.sh
 > - `dunst`
 > - `starship`
 > - `zoxide`
-> - `fastfetch`
 > - `brightnessctl`
-> - `tmux`
 > - `yad`
 > - `blueman`
 > - `fish`
 > - `eza`
+> - `qt5ct`
+> - `qt6ct`
 
 ## Default Apps
 
