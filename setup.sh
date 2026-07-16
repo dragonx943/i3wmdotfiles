@@ -147,7 +147,7 @@ install_dependencies() {
                 gnome-settings-daemon gnome-keyring neovim tree-sitter-cli btop i3lock \
                 ttf-meslo-nerd noto-fonts-emoji ttf-jetbrains-mono \
                 network-manager-applet blueman pasystray wget unzip \
-                curl zoxide nwg-look qt5ct qt6ct yad tmux fish eza \
+                curl zoxide nwg-look qt5ct qt6ct yad fish eza \
                 kvantum kitty dunst fastfetch picom starship slock brightnessctl
             "$AUR_HELPER" -S --noconfirm --needed xautolock
             ;;
@@ -161,7 +161,7 @@ install_dependencies() {
                 gnome-settings-daemon gnome-keyring neovim tree-sitter-cli btop i3lock \
                 network-manager-applet blueman pasystray \
                 jetbrains-mono-fonts-all google-noto-color-emoji-fonts \
-                google-noto-emoji-fonts wget unzip curl zoxide yad tmux fish \
+                google-noto-emoji-fonts wget unzip curl zoxide yad fish \
                 nwg-look qt5ct qt6ct kvantum kitty dunst fastfetch picom slock xautolock brightnessctl
 
             if ! command -v eza &> /dev/null; then
@@ -185,7 +185,7 @@ verify_dependencies() {
         i3 polybar rofi kitty picom dunst flameshot thunar
         gnome-keyring starship fastfetch git curl wget unzip
         nm-applet xrandr zoxide xclip fish eza tree-sitter
-        pasystray nvim slock xautolock brightnessctl yad tmux i3lock
+        pasystray nvim slock xautolock brightnessctl yad i3lock
     )
 
     local missing=()
@@ -305,7 +305,7 @@ apply_configs() {
     header "Applying Configs"
     mkdir -p "$BACKUP_DIR"
 
-    for cfg in kitty dunst fastfetch fish gtk-3.0 i3 Kvantum nvim polybar rofi tmux xsettingsd; do
+    for cfg in kitty dunst fastfetch fish gtk-3.0 i3 Kvantum nvim polybar qt5ct qt6ct rofi tmux xsettingsd zellij; do
         backup_and_replace "$cfg"
     done
 
